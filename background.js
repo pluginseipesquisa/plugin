@@ -1,7 +1,7 @@
-console.log('olá do arquivo background')
-
-chrome.browserAction.onClicked.addListener((tab) => {
-  chrome.tabs.executeScript({
-    code: 'document.body.style.backgroundColor="#C3413B"'
-  });
-});
+// chrome.runtime.onMessage.addListener((msg, sender) => {
+//   // First, validate the message's structure.
+//   if ((msg.from === 'content') && (msg.subject === 'showPageAction')) {
+//     // Enable the page-action for the requesting tab.
+//     chrome.pageAction.show(sender.tab.id);
+//   }
+// });

@@ -1,7 +1,12 @@
 function setData() {
+  const url = window.location.href;
+  const formSei = new FormData(document.getElementById("frmPesquisaProtocolo"));
+
   const results = document.querySelectorAll("#conteudo .resultado");
   const body = document.querySelector("body");
   const infos = document.querySelectorAll(".ancoraSigla")
+  const head = document.querySelector("head");
+
   // const metadata = document.querySelectorAll("#conteudo .resultado .metatag tr")
 
   
@@ -11,40 +16,50 @@ function setData() {
   //   lista.insertAdjacentHTML("beforeend", `<p>${result.innerText}</p>`)
   // });
 
+
+  // head.insertAdjacentHTML("beforeend", `<link rel="stylesheet" href="stylesheets/p-sei-style.css">`);
+
+  // const popup = document.querySelector("#popup");
+  // console.log(popup);
+
   body.insertAdjacentHTML("beforeend",
-    `<table>
-      <thead>
-      <tr>
-        <th>Tipo</th>
-        <th>Nº</th>
-        <th>Assunto</th>
-        <th>Data</th>
-        <th>Unidade Geradora</th>
-        <th>Usuário Gerador</th>
-      </tr>
-      <thead>
-      <tbody>
-          <div id="p-sei-type"></div>
-          <td id="number"></td>
-          <td id="subject"></td>
-          <td id="date"></td>
-          <td id="p-sei-unity"></td>
-          <div id="user"></div>
-      </tbody>
-    </table>`
+    `<div class="grid-container">
+      <div class="row">
+        <div class="column">Tipo</div>
+        <div class="column">Nº</div>
+        <div class="column">Assunto</div>
+        <div class="column">Data</div>
+        <div class="column">Unidade Geradora</div>
+        <div class="column">>Usuário Gerador</div>
+      </div>
+      <div class="row">
+          <div class="column" id="p-sei-type"></div>
+          <div class="column" id="number"></div>
+          <div class="column" id="subject"></div>
+          <div class="column" id="date"></div>
+          <div class="column" id="p-sei-unity"></div>
+          <div class="column" id="p-sei-user"></div>
+      </div>
+    </div>`
 
   )
 
-  const colType = document.querySelector("#p-sei-unity")
-  const colUser = document.querySelector("#user")
+  const colUnity = document.querySelector("#p-sei-unity")
+  const colUser = document.querySelector("#p-sei-user")
 
-  console.log(colType);
+  // console.log(colUnity);
+  // console.log(chrome);
+  console.log(chrome.pageAction);
+  // console.log(chrome.tabs);
+
+  
+  
 
   infos.forEach( (element, index) => {
     if (index % 2 === 0) {
-      colType.insertAdjacentHTML("beforeend", `<p>${element.innerText}</p>`)
+      colUnity.insertAdjacentHTML("beforeend", `<p>${element.innerText}</p>`)
     } else {
-      colUser.insertAdjacentHTML("beforeend", `<td>${element.innerText}</td>`)
+      colUser.insertAdjacentHTML("beforeend", `<p>${element.innerText}</p>`)
     }
   });
 
