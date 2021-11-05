@@ -1,0 +1,27 @@
+{
+  "name": "SEI pesquisa",
+  "version": "1.0",
+  "description": "Permite o display dos resultados da pesquisa em colunas",
+  "manifest_version": 2,
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "permissions": [
+    "activeTab"
+  ],
+  // "content_scripts": [{
+  //   "matches": ["\b(?:https?:\/\/)?[^\/:]+\/.*?controlador.php\?acao=protocolo_pesquisa.*"],
+  //   "js": ["content.js"]
+  // }],
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_icon": "images/128.png"
+  },
+  "icons": {
+    // "16": "images/icon.png",
+    // "32": "images/icon.png",
+    // "48": "images/icon.png",
+    "128": "images/128.png"
+  }
+}
+
