@@ -16,16 +16,11 @@
     ]
   }],
 
-  // "content_scripts": [{
-  //   "matches": ["\b(?:https?:\/\/)?[^\/:]+\/.*?controlador.php\?acao=protocolo_pesquisa.*"],
-  //   "js": ["content.js"]
-  // }],
-  // "content_scripts": [{
-  //   "matches": ["*://*.stackoverflow.com/*"],
-  //   "js": ["content.js"],
-  //   "run_at": "document_idle",
-  //   "all_frames": false
-  // }],
+  "content_scripts": [{
+    "matches": ["https://*/*"],
+    "js": ["content.js"]
+  }],
+
   "browser_action": {
     "default_popup": "popup.html",
     "default_icon": "images/128.png"

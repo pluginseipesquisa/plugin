@@ -23,23 +23,19 @@ function setData() {
   // console.log(popup);
 
   body.insertAdjacentHTML("beforeend",
-    `<div class="grid-container">
-      <div class="row">
-        <div class="column">Tipo</div>
-        <div class="column">Nº</div>
-        <div class="column">Assunto</div>
-        <div class="column">Data</div>
-        <div class="column">Unidade Geradora</div>
-        <div class="column">>Usuário Gerador</div>
-      </div>
-      <div class="row">
-          <div class="column" id="p-sei-type"></div>
-          <div class="column" id="number"></div>
-          <div class="column" id="subject"></div>
-          <div class="column" id="date"></div>
-          <div class="column" id="p-sei-unity"></div>
-          <div class="column" id="p-sei-user"></div>
-      </div>
+    `<div class="grid-container" style="background-color: red; display: grid; grid-template-columns: auto auto auto auto auto auto;">
+      <div class="column">Tipo</div>
+      <div class="column">Nº</div>
+      <div class="column">Assunto</div>
+      <div class="column">Data</div>
+      <div class="column">Unidade Geradora</div>
+      <div class="column">>Usuário Gerador</div>
+      <div class="column" id="p-sei-type"></div>
+      <div class="column" id="number"></div>
+      <div class="column" id="subject"></div>
+      <div class="column" id="date"></div>
+      <div class="column" id="p-sei-unity"></div>
+      <div class="column" id="p-sei-user"></div>
     </div>`
 
   )
