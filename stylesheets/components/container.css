@@ -2,3 +2,9 @@
   min-width: 600px;
   min-height: 400px;
 }
+
+.grid-container {
+  display: grid;
+  grid: 150px / auto auto auto;
+  background-color: red;
+}

@@ -9,10 +9,18 @@
   "permissions": [
     "activeTab"
   ],
-  // "content_scripts": [{
-  //   "matches": ["\b(?:https?:\/\/)?[^\/:]+\/.*?controlador.php\?acao=protocolo_pesquisa.*"],
-  //   "js": ["content.js"]
-  // }],
+  "content_scripts": [{
+    "css": ["stylesheets/p-sei-style.css"],
+    "matches":[
+      "*://*/controlador.php?acao=procedimento_pesquisa*"
+    ]
+  }],
+
+  "content_scripts": [{
+    "matches": ["https://*/*"],
+    "js": ["content.js"]
+  }],
+
   "browser_action": {
     "default_popup": "popup.html",
     "default_icon": "images/128.png"
