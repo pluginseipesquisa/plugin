@@ -19,7 +19,7 @@
 
   "content_scripts": [{
     "matches": ["https://*/*"],
-    "js": ["content.js"]
+    "js": ["content.js", "btn-change-table.js"]
   }],
 
   "browser_action": {
