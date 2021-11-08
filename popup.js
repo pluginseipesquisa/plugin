@@ -35,7 +35,8 @@ function listenClick() {
     }, function (results) {
       console.log(results);
       const popup = document.querySelector("#janela-popup");
-      popup.insertAdjacentHTML("beforeend", `<div> ${results[0]} </div>`)
+      popup.insertAdjacentHTML("beforeend", `<div> ${results[0]} </div>`);
+      
       // popup.insertAdjacentElement("beforeend", result)
       // I use the user selection for another purpose but for simplicity lets just log the selection
     });
