@@ -32,10 +32,32 @@ function listenClick() {
   button.addEventListener('click', () => {
     chrome.tabs.executeScript({
       file: 'scripts/get-data.js'
+    }, function (results) {
+      console.log(results);
+      const popup = document.querySelector("#janela-popup");
+      popup.insertAdjacentHTML("beforeend", `<div> ${results[0]} </div>`);
+      
+      // popup.insertAdjacentElement("beforeend", result)
+      // I use the user selection for another purpose but for simplicity lets just log the selection
     });
+
+    const  updateTextTo = document.getElementById("janela-popup").value;
+    chrome.storage.local.set({
+        updateTextTo: updateTextTo
+    }, function () {
+        chrome.tabs.executeScript({
+            file: 'scripts/get-data.js'
+        });
+    });
+    // , function (return) {
+    //   console.log(return);
+    //   // I use the user selection for another purpose but for simplicity lets just log the selection
+    // });
   });
   
 };
+
+
 
 
 
