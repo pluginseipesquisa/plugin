@@ -6,7 +6,7 @@ btnSeip.style.backgroundColor = "green"
 btnSeip.id = "get-data"
 btnSeip.innerHTML = "SEI Pesquisa";
 const metadata = document.querySelectorAll("#conteudo .resultado .metatag tr")
-const dados = metadata.forEach(result => console.log(result.innerText));
+// const dados = metadata.forEach(result => console.log(result.innerText));
 
 
 document.querySelector(".barra").appendChild(btnSeip)
@@ -14,7 +14,7 @@ document.querySelector(".barra").appendChild(btnSeip)
 
 btnSeip.addEventListener("click", (event) => {
   event.preventDefault();  
-  event.console.log(dados);
+  // event.console.log(dados);
     // chrome.tabs.executeScript({
     //   file: 'scripts/get-data.js'
     // });

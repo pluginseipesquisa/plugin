@@ -18,7 +18,7 @@ function setData() {
   // console.log(popup);
 
   body.insertAdjacentHTML("beforeend",
-    `<div class="grid-container" style="border-bottom: 1px solid #dddddd; display: grid; grid-template-columns: auto auto auto auto auto auto;">
+    `<div id="table-results" class="grid-container" style="border-bottom: 1px solid #dddddd; display: grid; grid-template-columns: auto auto auto auto auto auto;">
       <div class="column" >Tipo</div>
       <div class="column" >Nº</div>
       <div class="column" >Assunto</div>
@@ -71,9 +71,10 @@ function setData() {
   const infos = document.querySelectorAll(".metatag td a");
   infos.forEach( (element, index) => {
     if (index % 2 === 0) {
-      colUnity.insertAdjacentHTML("beforeend", `<p>${element.innerHTML}</p>`)
+      console.log(element);
+      colUnity.insertAdjacentHTML("beforeend", `<p>${element.outerHTML}</p>`)
     } else {
-      colUser.insertAdjacentHTML("beforeend", `<p>${element.innerHTML}</p>`)
+      colUser.insertAdjacentHTML("beforeend", `<p>${element.outerHTML}</p>`)
     }
   });
 
@@ -84,7 +85,9 @@ function setData() {
     colDate.insertAdjacentHTML("beforeend", `<p>${date}</p>`)
   });
 
-
+  const tableResults = document.getElementById("table-results");
+  tableResults.style.backgroundColor = "green"
+  return tableResults.innerHTML
 }
 
 
