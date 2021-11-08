@@ -9,7 +9,7 @@
   "permissions": [
     "activeTab"
   ],
-  
+
   // "content_scripts": [{
   //   "css": ["stylesheets/p-sei-style.css"],
   //   "matches":[
@@ -33,4 +33,3 @@
     "128": "images/128.png"
   }
 }
-
