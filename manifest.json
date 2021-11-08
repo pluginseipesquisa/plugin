@@ -9,12 +9,13 @@
   "permissions": [
     "activeTab"
   ],
-  "content_scripts": [{
-    "css": ["stylesheets/p-sei-style.css"],
-    "matches":[
-      "*://*/controlador.php?acao=procedimento_pesquisa*"
-    ]
-  }],
+  
+  // "content_scripts": [{
+  //   "css": ["stylesheets/p-sei-style.css"],
+  //   "matches":[
+  //     "*://*/controlador.php?acao=procedimento_pesquisa*"
+  //   ]
+  // }],
 
   "content_scripts": [{
     "matches": ["https://*/*"],

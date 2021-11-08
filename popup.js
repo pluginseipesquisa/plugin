@@ -17,13 +17,28 @@
 
 
 function listenClick() {
+//   const button = document.getElementById('get-data');
+//   button.addEventListener('click', () => {
+//     chrome.runtime.getBackgroundPage(function(bgWindow) {
+      
+//       chrome.runtime.sendMessage({rt:chrome.runtime});
+//       //bgWindow.setPassword('password');
+//       //window.close();     // Close dialog
+//     })
+//   })
+  
+  
   const button = document.getElementById('get-data');
   button.addEventListener('click', () => {
     chrome.tabs.executeScript({
       file: 'scripts/get-data.js'
     });
-  })
-}
+  });
+  
+};
+
+
+
 
 listenClick();
 
