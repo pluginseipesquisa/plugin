@@ -9,7 +9,7 @@
   "permissions": [
     "activeTab", "storage"
   ],
-  
+
   // "content_scripts": [{
   //   "css": ["stylesheets/p-sei-style.css"],
   //   "matches":[
@@ -19,7 +19,7 @@
 
   "content_scripts": [{
     "matches": ["https://*/*"],
-    "js": ["content.js"]
+    "js": ["content.js", "btn-change-table.js"]
   }],
 
   "browser_action": {
@@ -33,4 +33,3 @@
     "128": "images/128.png"
   }
 }
-
