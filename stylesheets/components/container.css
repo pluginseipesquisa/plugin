@@ -1,10 +1,10 @@
 #janela-popup {
-  min-width: 600px;
-  min-height: 400px;
+  min-width: 800px;
+  min-height: 600px;
 }
 
 .grid-container {
   display: grid;
-  grid: 150px / auto auto auto;
-  background-color: red;
+  grid: auto auto auto auto auto auto;
+  background-color: rgb(0, 238, 255);
 }

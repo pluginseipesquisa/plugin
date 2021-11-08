@@ -85,9 +85,10 @@ function setData() {
     colDate.insertAdjacentHTML("beforeend", `<p>${date}</p>`)
   });
 
+  document.querySelectorAll(".paginas a")[0].click();
+
   const tableResults = document.getElementById("table-results");
-  tableResults.style.backgroundColor = "green"
-  return tableResults.innerHTML
+  return tableResults.outerHTML
 }
 
 
