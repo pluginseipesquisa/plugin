@@ -6,5 +6,17 @@
 .grid-container {
   display: grid;
   grid: auto auto auto auto auto auto;
-  background-color: rgb(0, 238, 255);
+  background-color: rgb(240, 240, 240);
+  column-gap: 4;
+  row-gap: 6;
+}
+
+.column {
+  display: grid;
+  grid: auto auto auto auto auto auto;
+  background-color: rgb(240, 240, 240);
+  column-gap: 4;
+  row-gap: 6;
+  align-items: center;
+  padding: 0 6px;
 }
