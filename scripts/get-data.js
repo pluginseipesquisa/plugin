@@ -18,19 +18,19 @@ function setData() {
   // console.log(popup);
 
   body.insertAdjacentHTML("beforeend",
-    `<div id="table-results" class="grid-container" style="border-bottom: 1px solid #dddddd; display: grid; grid-template-columns: auto auto auto auto auto auto;">
-      <div class="column" >Tipo</div>
-      <div class="column" >Nº</div>
-      <div class="column" >Assunto</div>
-      <div class="column" >Data</div>
-      <div class="column" >Unidade Geradora</div>
-      <div class="column" >Usuário Gerador</div>
-      <div class="column" id="p-sei-type"></div>
-      <div class="column" id="p-sei-number"></div>
-      <div class="column" id="p-sei-subject"></div>
-      <div class="column" id="p-sei-date"></div>
-      <div class="column" id="p-sei-unity"></div>
-      <div class="column" id="p-sei-user"></div>
+    `<div id="table-results" class="grid-container">
+      <div class="columnH"  id="Tipo">Tipo</div>
+      <div class="columnH" id="Numero">Número</div>
+      <div class="columnH" id="Assunto">Assunto</div>
+      <div class="columnH" id="Data">Data</div>
+      <div class="columnH" id="Unidade">Unidade</div>
+      <div class="columnH" id="Usuario">Usuário</div>
+      <div class="column border" id="p-sei-type"></div>
+      <div class="column border" id="p-sei-number"></div>
+      <div class="column border" id="p-sei-subject"></div>
+      <div class="column border" id="p-sei-date"></div>
+      <div class="column border" id="p-sei-unity"></div>
+      <div class="column border" id="p-sei-user"></div>
     </div>`
 
   )
@@ -55,13 +55,13 @@ function setData() {
   // número documento - aparece apenas na pesquisa por documento
   const numDocArray = document.querySelectorAll("td.resTituloDireita");
   numDocArray.forEach( (element, index) => {
-    colNumber.insertAdjacentHTML("beforeend", `<p>${element.innerText}`)
+    colNumber.insertAdjacentHTML("beforeend", `<p>${element.innerText}</p>`)
   });
 
   // assunto documento - aparece apenas na pesquisa por documento
   const subjectArray = document.querySelectorAll(".resSnippet");
   subjectArray.forEach( (element, index) => {
-    colSubject.insertAdjacentHTML("beforeend", `<p>${element.innerText}`)
+    colSubject.insertAdjacentHTML("beforeend", `<p>${element.innerText}</p>`)
   });
 
 

@@ -1,0 +1,39 @@
+.columnH {
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+  color: rgb(110, 110, 110);
+  border-bottom: 1px solid rgb(160, 160, 160);
+}
+
+.column {
+  font-size: 11px;
+  text-align: center;
+  
+}
+
+#table-results {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto;
+  bs-gap:	2rem;
+}
+
+/* #p-sei-type #Tipo {
+  --bs-columns: 3;
+}
+
+#p-sei-number #Numero {
+  --bs-columns: 1;
+}
+#p-sei-subject #Assunto {
+  --bs-columns: 5;
+}
+#p-sei-date #Data {
+  --bs-columns: 1;
+}
+#p-sei-unity #Unidade {
+  --bs-columns: 1;
+}
+#p-sei-user #Usuario {
+  --bs-columns: 1;
+} */
