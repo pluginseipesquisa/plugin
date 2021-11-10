@@ -4,19 +4,6 @@ function setData() {
 
   const body = document.querySelector("body");
 
-  // const head = document.querySelector("head");
-  // const metadata = document.querySelectorAll("#conteudo .resultado .metatag tr")
-  
-  // results.forEach( (result) => {
-  //   console.log(result.innerText);
-  //   lista.insertAdjacentHTML("beforeend", `<p>${result.innerText}</p>`)
-  // });
-
-  // head.insertAdjacentHTML("beforeend", `<link rel="stylesheet" href="stylesheets/p-sei-style.css">`);
-
-  // const popup = document.querySelector("#popup");
-  // console.log(popup);
-
   body.insertAdjacentHTML("beforeend",
     `<div id="table-results" class="grid-container">
       <div class="columnH"  id="Tipo">Tipo</div>
@@ -41,10 +28,6 @@ function setData() {
   const colUnity = document.querySelector("#p-sei-unity")
   const colUser = document.querySelector("#p-sei-user")
 
-  // console.log(colUnity);
-  // console.log(chrome);
-  // console.log(chrome.pageAction);
-  // console.log(chrome.tabs);
 
   // tipo de processo e número processo
   const typeProcNumber = document.querySelectorAll("td.resTituloEsquerda");
@@ -87,11 +70,27 @@ function setData() {
 
   document.querySelectorAll(".paginas a")[0].click();
 
+
   const tableResults = document.getElementById("table-results");
   return tableResults.outerHTML
 }
 
-
+// function data() {
+//   setData();
+//   let pagesNavigator = document.querySelectorAll(".paginas a");
+//   let nextPage = (pagesNavigator[pagesNavigator.length - 1])
+  
+//   while (nextPage.innerText === "Próxima") {
+//     nextPage.click();
+//     setData();
+//     pagesNavigator = document.querySelectorAll(".paginas a");
+//     console.log(pagesNavigator)
+//     nextPage = (pagesNavigator[pagesNavigator.length - 1]);
+//     console.log(nextPage);
+//     break
+//   };
+// }
+// data();
 
 setData();
 
