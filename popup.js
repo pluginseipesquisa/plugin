@@ -52,10 +52,18 @@ function listenClick() {
     
       });
       
-  };
-
+    };
   });
   
+  // insert function export data
+  const buttonExport = document.getElementById('export-data');
+  buttonExport.addEventListener('click', () => {
+    console.log("Teste do Export");
+// inset function!!!
+
+  });
+  // end insert function export data
+
 };
 
 listenClick();
