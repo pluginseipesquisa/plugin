@@ -1,5 +1,9 @@
+// teste
+export const exportData = () => {
+
+
 // precisa pegar o total passado pela função total-results.js
-const total = 10
+const total = 20
     // take elements
     const seiType = document.getElementById("p-sei-type");
     const seiNumber = document.getElementById("p-sei-number");
@@ -62,3 +66,4 @@ const total = 10
 
     link.href = `${constEncodedUri}`;
     
+  };
