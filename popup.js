@@ -130,4 +130,29 @@ function listenClick() {
   });
 };
 
+
 listenClick();
+
+
+const listenExport = () => {
+
+ // insert function export data
+ const buttonExport = document.getElementById('export-data');
+ console.log(buttonExport);
+ buttonExport.addEventListener('click', () => {
+   console.log("Teste do Export");
+
+  (async () => {
+  const src = chrome.runtime.getURL("scripts/export-data.js");
+  const contentMain = await import(src);
+  // contentMain.total();
+  console.log(contentMain.exportData())
+  })();
+  
+  // inset function!!!
+ });
+};
+
+listenExport();
+
+
