@@ -7,9 +7,6 @@ function listenClick() {
   const button = document.getElementById('get-data');
   button.addEventListener('click', () => {
 
-    // objeto criado para armazenar os retornos
-	  // const arrRetorno = [];
-
     // script executado para buscar os parâmetros do formData
     chrome.tabs.executeScript({
       file: 'scripts/form-data.js'
@@ -20,15 +17,15 @@ function listenClick() {
       chrome.tabs.executeScript({
           file: 'scripts/total-results.js'
       }, function (resultsTotal) {
-        console.log(resultsTotal);
+        console.log(getTotal(resultsTotal));
         if(resultsTotal[0]==null){
           alert('sem resultados');
           return
         }  
-        // armazena o total de paginas para realizar a iteração
-        totalResults = parseInt(getTotal(resultsTotal));
-        nPagesSei = parseInt(totalResults);
-        totalPages = Math.trunc(totalResults/10);
+        // armazena o total de resultados e de paginas para realizar a iteração
+        const totalResults = parseInt(getTotal(resultsTotal));
+        const nPagesSei = parseInt(totalResults);
+        const totalPages = Math.trunc(totalResults/10);
 
         // seleciona os elementos no html da popup
         const resultsSei = document.querySelector("#results");
@@ -102,7 +99,7 @@ function listenClick() {
               const section = htmlDocument.documentElement.querySelectorAll("#conteudo");
 
               //const tables = section.querySelectorAll(".resultado")
-              var tables = section[0].querySelectorAll(".resultado");
+              let tables = section[0].querySelectorAll(".resultado");
 
               tables.forEach(function(data){
                 typeProcNumber = data.querySelectorAll(".resTituloEsquerda")[0].innerText;
