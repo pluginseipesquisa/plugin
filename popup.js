@@ -31,26 +31,6 @@ function listenClick() {
 
         // armazena o total de paginas para realizar a iteração
       	let nPagesSei = resultsTotal[0][1];
-
-      	//seleciona a div para inserir template e resultados
-        const popup = document.querySelector("#janela-popup");
-
-        //insere template no html da popup
-        popup.insertAdjacentHTML("beforeend",
-          `<div id="table-results" class="grid-container">
-            <div class="columnH"  id="Tipo">Tipo</div>
-            <div class="columnH" id="Numero">Número</div>
-            <div class="columnH" id="Assunto">Assunto</div>
-            <div class="columnH" id="Data">Data</div>
-            <div class="columnH" id="Unidade">Unidade</div>
-            <div class="columnH" id="Usuario">Usuário</div>
-            <div class="column border" id="p-sei-type"></div>
-            <div class="column border" id="p-sei-number"></div>
-            <div class="column border" id="p-sei-subject"></div>
-            <div class="column border" id="p-sei-date"></div>
-            <div class="column border" id="p-sei-unity"></div>
-            <div class="column border" id="p-sei-user"></div>
-          </div>`);
         
         // prepara os itens html da popup que recebem os resultados
         const colType = document.querySelector("#p-sei-type");
