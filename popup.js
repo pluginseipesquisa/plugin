@@ -8,13 +8,13 @@ function listenClick() {
   button.addEventListener('click', () => {
 
     // objeto criado para armazenar os retornos
-	  const arrRetorno = [];
+	  // const arrRetorno = [];
 
     // script executado para buscar os parâmetros do formData
     chrome.tabs.executeScript({
       file: 'scripts/form-data.js'
     }, function (resultsFormParams) {
-      // console.log('resultados', resultsFormParams);
+      console.log(resultsFormParams);
       
       // script executado para retornar o numero de paginas e resultados e apresentar na popup
       chrome.tabs.executeScript({
@@ -52,47 +52,79 @@ function listenClick() {
             <div class="column border" id="p-sei-user"></div>
           </div>`);
         
-        //insere template no html da popup
-        const formData_ = resultsFormParams[0][1];
-        //console.log(formData_)
+        // prepara os itens html da popup que recebem os resultados
+        const colType = document.querySelector("#p-sei-type");
+        const colNumber = document.querySelector("#p-sei-number");
+        const colSubject = document.querySelector("#p-sei-subject");
+        const colDate = document.querySelector("#p-sei-date");
+        const colDepartment = document.querySelector("#p-sei-unity")
+        const colUser = document.querySelector("#p-sei-user")
         
-        frmDt = JSON.parse(formData_);
+        // recebe os parâmetros do form
+        const formParams = resultsFormParams[0][1];
+        //console.log(formParams)
+        
+        // converte a string para JSON 
+        let formJson = JSON.parse(formParams);
         
         for (var i=0; i < nPagesSei; i++) {
-        	frmDt.hdnInicio = i*10;
-        	console.log(i)
+
+          // atualiza o parâmetro
+        	formJson.hdnInicio = i*10;
+        	// console.log(i)
         	//console.log(frmDt)
         	
-        	var form_data = new FormData();
-        	for ( var key in frmDt ) {
-        	    form_data.append(key, frmDt[key]);
+          // monta um novo form
+        	let formSei = new FormData();
+          // insere os parametros atualizados
+        	for ( var key in formJson ) {
+            formSei.append(key, formJson[key]);
         	}
         	
-        	//console.log(form_data)
-        	
-      	  	const pagina = fetch(resultsFetch[0][0], {
-                method: 'POST',
-                body: form_data,
-             }).then(
-            		 response => response.text()
-             ).then(text => {
-            	    const parser = new DOMParser();
-            	    const htmlDocument = parser.parseFromString(text, "text/html");
-            	    const section = htmlDocument.documentElement.querySelectorAll(".resultado");
-            	    console.log(section)
-            	    
-            	    var doc = parser.parseFromString(section, 'text/html');
-            	    popup.insertAdjacentHTML("beforeend", doc.documentElement.innerHTML);
-            	  })
-             /*.then(function(data){
-            		 //data => console.log(data)
-            	 console.log(data);
-            	 //popup.insertAdjacentHTML("beforeend", '<div> '+i+'</div>');
-        	});*/
-      	  	//popup.insertAdjacentHTML("beforeend", `<div> ${i} </div>`);
-        	//formData.set("hdnInicio", i*10)
-      	   // more statement
-        }
+        	// busca os resultados com a URL retornada e o form atualizado
+          fetch(resultsFormParams[0][0], {
+            method: 'POST',
+            body: formSei,
+         }).then(
+             response => response.text()
+         ).then(text => {
+              const parser = new DOMParser();
+              const htmlDocument = parser.parseFromString(text, "text/html");
+              
+              const section = htmlDocument.documentElement.querySelectorAll("#conteudo");
+              
+              //const tables = section.querySelectorAll(".resultado")
+              var tables = section[0].querySelectorAll(".resultado");
+              
+              tables.forEach(function(data){
+                typeProcNumber = data.querySelectorAll(".resTituloEsquerda")[0].innerText;
+                numDoc = data.querySelectorAll(".resTituloDireita")[0].innerText;
+                subject = data.querySelectorAll(".resSnippet")[0].innerText;
+                department = data.querySelectorAll(".ancoraSigla")[0].outerHTML;
+                user = data.querySelectorAll(".ancoraSigla")[1].outerHTML;
+                date = data.querySelectorAll(".metatag tr")[0].lastElementChild.innerText.split(" ")[1];
+                
+                html = `<p>${typeProcNumber}</p>`
+                colType.insertAdjacentHTML("beforeend", html);
+
+                html = `<p>${numDoc}</p>`
+                colNumber.insertAdjacentHTML("beforeend", html);
+
+                html = `<p>${subject}</p>`
+                colSubject.insertAdjacentHTML("beforeend", html);
+
+                html = `<p>${department}</p>`
+                colDepartment.insertAdjacentHTML("beforeend", html);
+
+                html = `<p>${user}</p>`
+                colUser.insertAdjacentHTML("beforeend", html);
+
+                html = `<p>${date}</p>`
+                colDate.insertAdjacentHTML("beforeend", html);
+
+              });
+          });
+        };
       });
     });
   });
