@@ -20,17 +20,23 @@ function listenClick() {
       chrome.tabs.executeScript({
           file: 'scripts/total-results.js'
       }, function (resultsTotal) {
+        console.log(resultsTotal);
+        if(resultsTotal[0]==null){
+          alert('sem resultados');
+          return
+        }  
+        // armazena o total de paginas para realizar a iteração
+        totalResults = parseInt(getTotal(resultsTotal));
+        nPagesSei = parseInt(totalResults);
+        totalPages = Math.trunc(totalResults/10);
 
         // seleciona os elementos no html da popup
         const resultsSei = document.querySelector("#results");
         const pagesSei = document.querySelector("#pages");
 
         // insere os valores de total de resultados e páginas no html da popup
-        resultsSei.insertAdjacentHTML("beforeend", `<div id="numberResults">${resultsTotal[0][0]}</div>`);
-        pagesSei.insertAdjacentHTML("beforeend", `<div>${resultsTotal[0][1]} </div>`);
-
-        // armazena o total de paginas para realizar a iteração
-      	let nPagesSei = resultsTotal[0][1];
+        resultsSei.insertAdjacentHTML("beforeend", `<div id="numberResults">${totalResults}</div>`);
+        pagesSei.insertAdjacentHTML("beforeend", `<div>${totalPages} </div>`);
 
       	//seleciona a div para inserir template e resultados
         const popup = document.querySelector("#janela-popup");
@@ -86,8 +92,10 @@ function listenClick() {
             method: 'POST',
             body: formSei,
          }).then(
-             response => response.text()
-         ).then(text => {
+            response => response.arrayBuffer()
+         ).then(buffer => {
+              let decoder = new TextDecoder("iso-8859-1");
+              let text = decoder.decode(buffer);
               const parser = new DOMParser();
               const htmlDocument = parser.parseFromString(text, "text/html");
 
@@ -127,6 +135,27 @@ function listenClick() {
         };
       });
     });
+    function getTotal(resultsTotal){
+      sptTotal = resultsTotal[0].split(" ");
+      var total = 0;
+      isPen = false;
+      
+      if(sptTotal.length==2){
+        total = parseInt(sptTotal[0])
+      }else{
+        sptTotal.forEach(function(t){
+            if(isPen){
+            total = parseInt(t)
+          }
+            if(t=='de'){
+              isPen=true;
+            }
+          })
+      }
+      
+      return total
+      
+    }
   });
 };
 
