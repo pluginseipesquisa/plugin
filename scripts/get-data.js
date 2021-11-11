@@ -2,6 +2,8 @@ function setData() {
   const url = window.location.href;
   const formSei = new FormData(document.getElementById("frmPesquisaProtocolo"));
 
+  
+
   const body = document.querySelector("body");
 
   body.insertAdjacentHTML("beforeend",

@@ -1,12 +1,13 @@
 
 function totalResults() {
   
+  // identifica o total de resultados encontrados na pesquisa
   const total = parseInt(document.querySelectorAll("#conteudo .barra")[0].innerText.split(" ")[5].split("T")[0]);
+  
+  // identifica o total páginas
   const totalPages = Math.trunc(total/10) + 1;
 
-  let body = document.querySelector("body");
-  body.insertAdjacentHTML("beforeend", `<div>${totalPages} </div>`);
-
+  // retorna total de resultados e total de páginas
   return [total, totalPages]
 }
 
