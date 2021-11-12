@@ -10,19 +10,30 @@
     "activeTab"
   ],
 
-  "content_scripts": [{
-    "matches": ["https://*/*"],
-    "js": ["content.js", "btn-change-table.js"]
-  }],
+  "content_scripts": [
+    {
+      "matches": [
+      "*://sei.ibama.gov.br/controlador.php?acao=procedimento_pesquisa*",
+      "*://sei.ibama.gov.br/sei/controlador.php?acao=procedimento_pesquisa*",
+      "*://*/controlador.php?acao=procedimento_pesquisa*",
+      "*://*/sei/controlador.php?acao=procedimento_pesquisa*",
+      "*://*/sip/controlador.php?acao=procedimento_pesquisa*"
+    ],
+      "run_at": "document_idle",
+      "all_frames": true,
+      "js": [
+        "content.js",
+        "popup.js"
+      ],
+      "css":["stylesheets/p-sei-style.css"]
+    }
+  ],
 
   "browser_action": {
     "default_popup": "popup.html",
     "default_icon": "images/128.png"
   },
   "icons": {
-    // "16": "images/icon.png",
-    // "32": "images/icon.png",
-    // "48": "images/icon.png",
     "128": "images/128.png"
   }
 }
