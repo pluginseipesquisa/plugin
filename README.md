@@ -2,19 +2,18 @@
 Sei!Pesquisa adiciona ao [Sistema Eletrônico de Informações (SEI)](https://softwarepublico.gov.br/social/sei) a função...
 Pesquisou por um documento e não conseguiu encontrar o processo desejado? Acione o botão SEI!Pesquisa (inserir o botão).
 
--Símbolo da licença
-
 [![NPM](https://img.shields.io/npm/l/react)](https://github.com/pluginseipesquisa/plugin/blob/add-license-1-improve-readme/LICENSE)
 
-## Como começar?
-links
+## Política de privacidade
+O Sei!Pesquisa não armazena ou compartilha qualquer informação do usuário ou da plataforma SEI. Os dados são tratados localmente na máquina do usuário, respeitando as políticas de permissão e acesso definidas pelo órgão de origem.
 
-## Como utilizar?
+## Como começar? (em construção)
+https://pluginseipesquisa.github.io/landing/
+
+## Como utilizar? (em construção)
 (Fazer e inserir os nossos GIF)
 
-![Exemplo GIF](https://github.com/SEI-Pro/sei-legis/blob/master/img/tela-1.02.gif)
-
-## Layout
+## Layout (em construção)
 -para inserir imagens:
 
 ![texto alternativo](https://github.com/pluginseipesquisa/plugin/blob/add-license-1-improve-readme/images/128.png)
@@ -22,10 +21,15 @@ links
 # Tecnologias utilizadas
 ![texto alternativo](https://github.com/marcelo7bastos/landing_page_teste/blob/main/coding-language.png)
 
-# Como contribuir
+# Como contribuir 
+Por favor nos envie um e-mail: pluginseipesquisa@gmail.com
+
 
 # Autores
-
+Isabela Cardoso
+Daniel Perini
+Marcelo Bastos
+Marcelo Sette
 
 # Agradecimentos
 [Enap](https://www.enap.gov.br/pt/)
