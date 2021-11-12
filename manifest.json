@@ -6,16 +6,15 @@
   "background": {
     "scripts": ["background.js"]
   },
-  "permissions": [
-    "activeTab"
-  ],
+  "permissions": [ "https://*/sei*", "https://*/sip*"],
 
   "content_scripts": [{
-    "matches": ["https://*/*"],
+    "matches": ["https://*/sei*", "https://*/sip*"],
     "js": ["content.js"]
   }],
 
   "browser_action": {
+    "matches": ["https://*/sei*", "https://*/sip*"],
     "default_popup": "popup.html",
     "default_icon": "images/128.png"
   },
