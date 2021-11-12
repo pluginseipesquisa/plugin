@@ -19,7 +19,7 @@
       "*://*/sei/controlador.php?acao=procedimento_pesquisa*",
       "*://*/sip/controlador.php?acao=procedimento_pesquisa*"
     ],
-      "run_at": "document_idle",
+      "run_at": "document_start",
       "all_frames": true,
       "js": [
         "content.js",
