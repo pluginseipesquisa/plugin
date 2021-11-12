@@ -74,18 +74,16 @@ function listenClick() {
 
       // recebe os parâmetros do form
       const formParams = resultsFormParams[0][1];
-      //console.log(formParams)
 
       // converte a string para JSON
       let formJson = JSON.parse(formParams);
-
+      let tpPesquisa = formJson.rdoPesquisarEm;
       document.getElementById('loading').style.display = 'block';
       for (var i=0; i < nPagesSei; i++) {
 
         // atualiza o parâmetro
       	formJson.hdnInicio = i*10;
-      	// console.log(i)
-      	//console.log(frmDt)
+      	
 
         // monta um novo form
       	let formSei = new FormData();
@@ -101,7 +99,6 @@ function listenClick() {
         }).then(
           response => response.arrayBuffer()
         ).then(buffer => {
-        	//console.log()
             let decoder = new TextDecoder("iso-8859-1");
             let text = decoder.decode(buffer);
             const parser = new DOMParser();
@@ -109,13 +106,12 @@ function listenClick() {
             
             const section = htmlDocument.documentElement.querySelectorAll("#conteudo");
 
-            //const tables = section.querySelectorAll(".resultado")
             let tables = section[0].querySelectorAll(".resultado");
 
             tables.forEach(function(data){
               typeProcNumber = data.querySelectorAll(".resTituloEsquerda")[0].innerText;
               numDoc = i + " - "+ data.querySelectorAll(".resTituloDireita")[0].innerText;
-              subject = data.querySelectorAll(".resSnippet")[0].innerText;
+              subject = (tpPesquisa=='D') ? data.querySelectorAll(".resSnippet")[0].innerText : '';
               department = data.querySelectorAll(".ancoraSigla")[0].outerHTML;
               user = data.querySelectorAll(".ancoraSigla")[1].outerHTML;
               date = data.querySelectorAll(".metatag tr")[0].lastElementChild.innerText.split(" ")[1];
@@ -150,9 +146,10 @@ function listenClick() {
     
     });
     function getTotal(resultsTotal){
+      console.log(resultsTotal)
       sptTotal = resultsTotal.split(" ");
       
-      var total = 0;
+      let total = 0;
       isPen = false;
       
       if(sptTotal.length==2){
@@ -160,14 +157,14 @@ function listenClick() {
       }else{
         sptTotal.forEach(function(t){
             if(isPen){
-            total = parseInt(t)
-          }
+              total = parseInt(t)
+            }
             if(t=='de'){
               isPen=true;
             }
           })
       }
-      
+      console.log(total)
       return total
       
     }
