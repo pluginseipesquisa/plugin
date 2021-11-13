@@ -27,11 +27,21 @@ Por favor nos envie um e-mail: pluginseipesquisa@gmail.com
 
 # Autores
 Isabela Cardoso
+
 Daniel Perini
+
 Marcelo Bastos
+
 Marcelo Sette
 
+
+<a href="Roberto 2"><img src="https://avatars.githubusercontent.com/u/178025?v=4" align="left" height="48" width="48" ></a>
+### ![Roberto](https://github.com/RobertoBarros)
+
+
 # Agradecimentos
+
+
 [Enap](https://www.enap.gov.br/pt/)
 
 [LeWagon](https://www.lewagon.com/pt-BR)
@@ -39,3 +49,11 @@ Marcelo Sette
 https://guides.github.com/features/mastering-markdown/
 
 <img src="https://avatars.githubusercontent.com/u/5470001?s=64&amp;v=4" alt="@lewagon" size="32" height="32" width="32" data-view-component="true" class="avatar">
+
+
+
+# teste teste
+
+teste 1 <img src="https://avatars.githubusercontent.com/u/47831197?v=4" class="img-thumbnail" style="max-width: 32px" width="32" >Marcelo Bastos
+
+teste 2 <img src="https://avatars.githubusercontent.com/u/47831197?v=4" class="img-thumbnail" style="max-width: 90px" width="90" ></a>
