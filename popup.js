@@ -110,8 +110,8 @@ function listenClick() {
 
             tables.forEach(function(data){
               typeProcNumber = data.querySelectorAll(".resTituloEsquerda")[0].innerText;
-              numDoc = i + " - "+ data.querySelectorAll(".resTituloDireita")[0].innerText;
-              subject = (tpPesquisa=='D') ? data.querySelectorAll(".resSnippet")[0].innerText : '';
+              numDoc = data.querySelectorAll(".resTituloDireita")[0].innerText;
+              subject = (tpPesquisa=='D') ? ((data.querySelectorAll(".resSnippet")[0]) ? data.querySelectorAll(".resSnippet")[0].innerText : '') : '';
               department = data.querySelectorAll(".ancoraSigla")[0].outerHTML;
               user = data.querySelectorAll(".ancoraSigla")[1].outerHTML;
               date = data.querySelectorAll(".metatag tr")[0].lastElementChild.innerText.split(" ")[1];
