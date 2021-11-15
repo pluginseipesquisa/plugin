@@ -9,23 +9,26 @@ Pesquisou por um documento e não conseguiu encontrar o processo desejado? Acion
 O Sei!Pesquisa não armazena ou compartilha qualquer informação do usuário ou da plataforma SEI. Os dados são tratados localmente na máquina do usuário, respeitando as políticas de permissão e acesso definidas pelo órgão de origem.
 
 ## Como utilizar?
-1 - Baixe o plugin SEI!PEsquisa na [Chrome Store](https://chrome.google.com/webstore/category/extensions?hl=pt-br);
+**1** - Baixe o plugin SEI!PEsquisa na [Chrome Store](https://chrome.google.com/webstore/category/extensions?hl=pt-br);
 
-2 - Faça sua pesquisa no Sistema Eletrônico de Informações (SEI);](https://softwarepublico.gov.br/social/sei)
+**2** - Faça sua pesquisa no Sistema Eletrônico de Informações (SEI);](https://softwarepublico.gov.br/social/sei)
 
-3 - Clique na extensão na barra de navegação do Chrome
+**3** - Clique na extensão na barra de navegação do Chrome
 
 ![image](https://user-images.githubusercontent.com/47831197/141804346-54bbfc88-d337-432c-ad1e-116be6692fea.png)
 
-4 - Clique no botão "Carregar Dados"
+
+**4** - Clique no botão "Carregar Dados"
 
 ![image](https://user-images.githubusercontent.com/47831197/141805081-3db9f972-c8ac-4ec0-8136-9361c21c14f8.png)
 
-5 - Após finalizar o carregamento dos dados, caso queira, clique em "Exportar Dados"
+
+**5** - Após finalizar o carregamento dos dados, caso queira, clique em "Exportar Dados"
 
 ![image](https://user-images.githubusercontent.com/47831197/141805416-84d16a87-7188-482f-b48b-308d49ad3c42.png)
 
-6 - Os resultados são exportados em ".csv". Para abrir corretamente em planilhas eletrônicas (excel), clique em "Data" e depois em "FromText/CSV". 
+
+**6** - Os resultados são exportados em ".csv". Para abrir corretamente em planilhas eletrônicas (excel), clique em "Data" e depois em "FromText/CSV". 
 
 ![image](https://user-images.githubusercontent.com/47831197/141805736-140bb48e-9242-45e1-90db-f01885ccc497.png)
 
