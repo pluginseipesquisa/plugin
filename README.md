@@ -35,10 +35,6 @@ Marcelo Bastos
 Marcelo Sette
 
 
-<a href="Roberto 2"><img src="https://avatars.githubusercontent.com/u/178025?v=4" align="left" height="48" width="48" ></a>
-### ![Roberto](https://github.com/RobertoBarros)
-
-
 # Agradecimentos
 
 
@@ -50,10 +46,11 @@ https://guides.github.com/features/mastering-markdown/
 
 <img src="https://avatars.githubusercontent.com/u/5470001?s=64&amp;v=4" alt="@lewagon" size="32" height="32" width="32" data-view-component="true" class="avatar">
 
+## LeWagon Professores
+<a href="Roberto"><img src="https://avatars.githubusercontent.com/u/178025?v=4" align="left" height="48" width="48" border-radius="25px" ></a>
+[**Roberto Barros**](https://github.com/RobertoBarros)
 
 
-# teste teste
 
-teste 1 <img src="https://avatars.githubusercontent.com/u/47831197?v=4" class="img-thumbnail" style="max-width: 32px" width="32" >Marcelo Bastos
 
-teste 2 <img src="https://avatars.githubusercontent.com/u/47831197?v=4" class="img-thumbnail" style="max-width: 90px" width="90" ></a>
+  
