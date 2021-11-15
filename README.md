@@ -1,6 +1,7 @@
-# Bem vindo(a) ao SEI!Pesquisar
-Sei!Pesquisa adiciona ao [Sistema Eletrônico de Informações (SEI)](https://softwarepublico.gov.br/social/sei) a função...
-Pesquisou por um documento e não conseguiu encontrar o processo desejado? Acione o botão SEI!Pesquisa (inserir o botão).
+# Bem vindo(a) ao SEI!Pesquisa
+Sei!Pesquisa adiciona ao [Sistema Eletrônico de Informações (SEI)](https://softwarepublico.gov.br/social/sei) cuja função é facilitar encontrar documentos nos resultados obtidos a partir de pesquisas no SEI.
+
+Pesquisou por um documento e não conseguiu encontrar o processo desejado? Acione o botão **SEI!Pesquisa**.
 
 [![NPM](https://img.shields.io/npm/l/react)](https://github.com/pluginseipesquisa/plugin/blob/add-license-1-improve-readme/LICENSE)
 
