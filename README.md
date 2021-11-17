@@ -9,7 +9,7 @@ Pesquisou por um documento e não conseguiu encontrar o processo desejado? Acion
 O Sei!Pesquisa não armazena ou compartilha qualquer informação do usuário ou da plataforma SEI. Os dados são tratados localmente na máquina do usuário, respeitando as políticas de permissão e acesso definidas pelo órgão de origem.
 
 ## Como utilizar?
-**1** - Baixe o plugin SEI!PEsquisa na [Chrome Store](https://chrome.google.com/webstore/category/extensions?hl=pt-br);
+**1** - Baixe o plugin SEI!PEsquisa na [Chrome Store](https://chrome.google.com/webstore/detail/sei-pesquisa/hldfofkejppjhbcnkfdogocfablbeehf/related );
 
 **2** - Faça sua pesquisa no Sistema Eletrônico de Informações (SEI);](https://softwarepublico.gov.br/social/sei)
 
